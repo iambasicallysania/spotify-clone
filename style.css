@@ -1,122 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body{
-    background-color: antiquewhite;
-}
-
-*{
+    font-family: "Montserrat", sans-serif;
     margin: 0;
-    padding: 0;
+    background-color:black;
+    color:white;
+    overflow-x:hidden;/*prevent horizontal scrolling*/
+
 }
 
-nav{
-    font-family: 'Ubuntu', sans-serif;
+.main{
+    display:flex;/*flexbox layout for the main container*/
+    height:100vh;/*full height of the viewport*/
 }
-
-nav ul{
+.sidebar{
+    background-color:black;
+    width:340px;/*fixed width for the sidebar*/
+    border-radius:1rem;/*1 rem=16px border radius for rounded corners*/
+}
+.main-content{
+    background-color:#121212;
+    flex:1;/*take up remaining space in the main container*/
+    border-radius:1rem;/*1 rem=16px border radius for rounded corners*/
+    overflow-y:auto;/*enable vertical scrolling if content overflows*/
+}
+.music-player{
+    background-color:black;
+    position:fixed;/*fixed position at the bottom of the viewport*/
+    bottom:0;
+    width:100%;/*full width of the viewport*/
+    height: 72px;
+}
+a{
+    text-decoration:none;/*remove underline from links*/
+    color:white;/*set link color to white*/
+}
+.nav-options {
     display: flex;
     align-items: center;
-    list-style-type: none;
-    height: 65px;
-    background-color: black;
-    color: white;
+    gap: 10px;
+    line-height: 2.5rem;/*2.5 rem=40px line height for spacing between navigation items*/;
+    font-size: 1.25rem;
+    opacity: 0.7;/*slightly transparent navigation items*/
 }
-
-nav ul li{
-    padding: 0 12px;
+.nav-options:hover {
+    opacity: 1;/*fully opaque on hover*/
 }
-.brand img{
-    width: 44px;
-    padding: 0 8px;
+nav-options a {
+    font-size: 1rem;
 }
-
-.brand {
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
+.nav{
+    background-color:#121212;
+    border-radius:1rem;/*1 rem=16px border radius for rounded corners*/
+    display:flex;/*flexbox layout for the navigation bar*/
+    flex-direction:column;/*stack navigation items vertically*/
+    justify-content:center;/*space out navigation items evenly*/
+    height:100px;
+    padding:0.5rem 0.75rem;/*0.5 rem=8px padding for the navigation bar*/
 }
-
-.container{
-    min-height: 72vh;
-    background-color: black;
-    color: white;
-   font-family: 'Varela Round', sans-serif;
-   display: flex;
-   margin: 23px auto;
-   width: 70%;
-   border-radius: 12px;
-   padding: 34px;
-   background-image: url('sp bg pic 3.jpg');
-}
-
-.bottom{
-    position: sticky;
-    bottom: 0;
-    height: 130px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-}
-
-.icons{
-    margin-top: 14px; 
-}
-.icons i{
-    cursor: pointer;
-}
-
-#myProgressBar{
-    width: 80vw; 
-    cursor: pointer;
-}
-
-.songItemContainer{
-    margin-top: 74px;
-}
-
-.songItem{
-    height: 50px;
-    display: flex;
-    background-color: white;
-    
-    color: black;
-    margin: 12px 0;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 34px;
-}
-
-.songItem img{
-    width: 43px;
-    margin: 0 23px;
-    border-radius: 34px;
-}
-
-.timestamp{
-    margin: 0 23px;
-}
-
-.timestamp i{
-    cursor: pointer;
-}
-
-.songInfo{
-    position: absolute;
-    left: 10vw;
-    font-family: 'Varela Round', sans-serif;
-}
-
-.songInfo img{
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
-}
-
-@media only screen and (max-width: 1100px) {
-    body {
-      background-color: red;
-    }
-  }
