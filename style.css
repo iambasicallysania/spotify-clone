@@ -10,17 +10,21 @@ body{
 .main{
     display:flex;/*flexbox layout for the main container*/
     height:100vh;/*full height of the viewport*/
+    padding:1rem;/*1 rem=16px padding for the main container*/
 }
 .sidebar{
     background-color:black;
     width:340px;/*fixed width for the sidebar*/
     border-radius:1rem;/*1 rem=16px border radius for rounded corners*/
+    margin-right: 0.5rem;/*0.5 rem=8px margin for spacing between sidebar and main content*/
 }
 .main-content{
     background-color:#121212;
     flex:1;/*take up remaining space in the main container*/
     border-radius:1rem;/*1 rem=16px border radius for rounded corners*/
     overflow-y:auto;/*enable vertical scrolling if content overflows*/
+    padding: 0 1.5rem 0 1.5rem; ;
+
 }
 .music-player{
     background-color:black;
@@ -44,7 +48,7 @@ a{
 .nav-options:hover {
     opacity: 1;/*fully opaque on hover*/
 }
-nav-options a {
+.nav-options a {
     font-size: 1rem;
 }
 .nav{
@@ -55,4 +59,290 @@ nav-options a {
     justify-content:center;/*space out navigation items evenly*/
     height:100px;
     padding:0.5rem 0.75rem;/*0.5 rem=8px padding for the navigation bar*/
+}
+
+.library{
+    background-color:#121212;
+    border-radius:1rem;/*1 rem=16px border radius for rounded corners*/
+    height:100%;
+    margin-top: 0.5rem;
+    padding:0.5rem 0.75rem;
+}
+.options{
+    display:flex;/*flexbox layout for the options container*/
+    justify-content: space-between;/*space out options evenly*/
+    align-items:center;/*center align options vertically*/
+}
+
+.lib-options img{
+height: 1.25rem;/*1.25 rem=20px height for library option icons*/
+width: 1.25rem;/*1.25 rem=20px width for library option icons*/
+}
+
+.icons{
+    font-size: 1.25rem;
+    opacity: 0.7;
+    margin-right: 1rem;
+    display: flex;
+}
+
+.icons svg{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons svg:hover{
+    opacity: 1;
+}
+
+.box{
+    background-color:#232323;
+    height:8.75rem;/*8.75 rem=140px height for the box*/
+    border-radius:0.75rem;/*1 rem=16px border radius for rounded corners*/
+    margin:0.75rem 0 1.75rem 0;/*0.5 rem=8px margin for spacing between boxes*/
+    padding: 0.75rem 1rem;/*1 rem=16px padding for the box content*/
+}
+.box-p1{
+
+    font-size: 1rem;/*1 rem=16px font size for the box paragraph*/
+    font-weight: 700;/*semi-bold font weight for the box paragraph*/
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;/*slightly transparent text for the box paragraph*/
+
+}
+.badge{
+    background-color:white;
+    color:black;
+    border:none;
+    border-radius:100px;/*100 px border radius for circular badge*/
+    padding:0.4rem 1rem;/*0.25 rem=4px padding for the badge*/
+    font-weight: 700;/*semi-bold font weight for the badge*/
+    margin-top: 0.85rem;/*0.5 rem=8px margin for spacing between badge and box content*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.3rem;/*0.25 rem=4px gap for spacing between badge text and icon*/
+    white-space: nowrap;/*prevent badge text from wrapping to the next line*/
+    cursor: pointer;/*change cursor to pointer on hover*/
+}
+.badge svg {/*style for the badge icon*/
+    width: 1rem;/*1 rem=16px width for the badge icon*/
+    height: 1rem;/*1 rem=16px height for the badge icon*/
+    display: block;/*display the badge icon as a block element*/
+}
+.sticky-nav-options > svg {/*style for the sticky navigation icons*/
+    width: 1.25rem;
+    height: 1.25rem;
+    align-items: center;
+    
+}
+
+.sticky-nav{
+    position:sticky;/*sticky position for the navigation bar*/
+    top:0;/*stick to the top of the viewport*/
+    background-color:#121212;
+    z-index: 1;/*ensure the navigation bar is above other content*/
+    display:flex;/*flexbox layout for the sticky navigation bar*/
+    justify-content:space-between;/*space out navigation items evenly*/
+    align-items: center;
+    padding: 0.75rem 1rem;
+
+
+}
+.sticky-nav-icons img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.sticky-nav-options > svg {/*style for the sticky navigation icons*/
+
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+
+}
+
+.user-icon {
+   
+  border-radius: 50%; /* Make the user icon circular */
+  height: 2rem; /* Set the height of the user icon */
+  width: 2rem; /* Set the width of the user icon */
+  margin-right: 1rem; /* Add some space to the left of the user icon */
+}
+.dark-badge {
+    background-color: #000; /* Dark background for the badge */
+    color: #fff; /* White text color for contrast */
+    font-weight:700 ;
+}
+.card{
+    background-color:#232323;
+    width: 190px;
+    border-radius:0.5rem;/*0.5 rem=8px border radius for the card*/
+    padding: 1rem ;/*2 rem=32px padding for the card content*/
+    margin-left:1.5rem;
+    margin-top: 1rem;
+}
+.cards-container{
+    display:flex;/*flex box ki help se sare divs same line m aa gye*/
+    flex-wrap:wrap;/*flex items ko wrap karne ke liye*/
+    
+   
+}
+.card-img{
+    width: 100%;
+    border-radius:0.5rem;/*0.5 rem=8px border radius for the card image*/
+   
+}
+.card-title{
+    font-size: 1.25rem;/*1 rem=16px font size for the card title*/
+    font-weight: 700;/*semi-bold font weight for the card title*/
+    margin-top: 0.15rem;/*0.5 rem=8px margin for spacing between card title and image*/
+}
+.card-info{
+    font-size: 0.75rem;/*0.85 rem=13.6px font size for the card info*/
+    opacity: 0.7;/*slightly transparent text for the card info*/
+}
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width:90%;
+    height:5%;
+    border-top: 1px solid white;
+    opacity:0.4;
+
+}
+.music-player{
+    display:flex;/*flexbox layout for the music player*/
+    justify-content:center;/*space out player sections evenly*/
+    align-items:center;/*center align player sections vertically*/
+}
+.album{
+    width: 25%;
+
+}
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+}
+.player-controls{
+    display:flex;/*flexbox layout for the player controls*/
+    justify-content:center;/*space out control icons evenly*/
+    align-items:center;/*center align control icons vertically*/
+    /*width: 50%;/*50% width for the player controls section*/
+}
+.player-control-icon{
+    height: 1rem;/*1 rem=16px height for the player control icons*/
+    margin-right: 1.75rem;
+    opacity: 0.7;/*slightly transparent control icons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-control-icon:hover{
+    opacity: 1;/*fully opaque on hover*/
+}
+.playback-bar{
+    display:flex;/*flexbox layout for the playback bar*/
+    justify-content:center;/*space out playback bar sections evenly*/
+    align-items:center;/*center align playback bar sections vertically*/
+    gap: 0.5rem;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;/*remove default styling for the progress bar*/
+    background-color: transparent;/*transparent background for the progress bar*/
+    cursor: pointer;/*change cursor to pointer on hover*/
+}
+.progress-bar::-webkit-slider-runnable-track{
+    height: 0.25rem;/*0.25 rem=4px height for the progress bar track*/
+    background-color: #ddd;/*light gray background for the progress bar track*/
+    border-radius: 100px;/*100 px border radius for rounded corners*/
+    height: 0.25rem;/*0.25 rem=4px height for the progress bar track*/
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;/*remove default styling for the progress bar thumb*/
+    width: 1rem;/*1 rem=16px width for the progress bar thumb*/
+    height: 1rem;/*1 rem=16px height for the progress bar thumb*/
+    background-color:#1bd760;/*white background for the progress bar thumb*/
+    border-radius: 100px;/*100 px border radius for rounded corners*/
+    margin-top: -0.375rem;/*-0.375 rem=-6px margin for positioning the progress bar thumb*/
+} 
+
+
+.album{
+    width:25%;
+    display:flex;
+    align-items:center;
+}
+.album-img{
+    width:4rem;
+    height:4rem;
+    object-fit:cover;
+}
+.album-info{
+    margin-left:1rem;
+}
+.song-name{
+    font-size:1rem;
+    font-weight:600;
+    margin:0 0 0.3rem 0;
+}
+
+.artist-name{
+    font-size:0.85rem;
+    margin:0;
+    opacity:0.7;
+}
+.album-icon{
+    width:1.5rem;
+    height:1.5rem;
+    margin-left:0.75rem;
+}
+.controls {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.control-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.volume-bar {
+    width: 5rem;
+    flex-shrink: 0;
+    height: 4px;
+    appearance: none;
+    background: #b3b3b3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* jo circle/knob hai */
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
 }
