@@ -1,7 +1,7 @@
 # Spotify Clone 🎵
 ## 🔗 Live Demo
 
-[View Spotify Clone]
+[View Spotify Clone](https://iambasicallysania.github.io/spotify-clone/)
 
 A Spotify-inspired music player website built using HTML and CSS.
 
