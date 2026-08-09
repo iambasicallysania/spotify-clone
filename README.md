@@ -1,4 +1,7 @@
 # Spotify Clone 🎵
+## 🔗 Live Demo
+
+[View Spotify Clone]
 
 A Spotify-inspired music player website built using HTML and CSS.
 
